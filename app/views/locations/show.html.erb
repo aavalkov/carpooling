@@ -1,6 +1,11 @@
 <h1><%= @location.name %></h1>
 
 <h2>Routes</h2>
+<ul>
+  <% @location.routes.each do |route| %>
+    <li><%= link_to "#{route.name}", route_path(route)%></li>
+  <% end %>
+</ul>
 
 <%= link_to "Edit", edit_location_path(@location), :class => "btn btn-warning" %>
 <%= link_to "Home", locations_path, :class => "btn btn-success" %>

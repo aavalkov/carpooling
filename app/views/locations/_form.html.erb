@@ -1,3 +1,5 @@
+<%= render("layouts/errors", :object => @location) %>
+
 <%= form_for(@location) do |f| %>
   <div class='form-group'>
     <%= f.label :name%>

@@ -1,3 +1,5 @@
+<%= render("layouts/errors", :object => @route) %>
+
 <%= form_for(@route) do |f| %>
   <div class='form-group'>
     <%= f.label :name%>
