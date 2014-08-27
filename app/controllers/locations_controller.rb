@@ -35,4 +35,10 @@ class LocationsController < ApplicationController
       render 'edit'
     end
   end
+
+  def destroy
+    @location = Location.find(params[:id])
+    @location.destroy
+    redirect_to locations_path
+  end
 end
