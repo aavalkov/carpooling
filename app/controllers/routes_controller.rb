@@ -20,4 +20,18 @@ class RoutesController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @route = Route.find(params[:id])
+  end
+
+  def update
+    @route = Route.find(params[:id])
+    if @route.update(params[:route])
+      flash[:notice] = "'#{@route.name}' updated"
+      redirect_to locations_path
+    else
+      render 'edit'
+    end
+  end
 end
