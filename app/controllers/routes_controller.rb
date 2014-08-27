@@ -10,4 +10,14 @@ class RoutesController < ApplicationController
   def new
     @route = Route.new(params[:route])
   end
+
+  def create
+    @route = Route.new(params[:route])
+    if @route.save
+      flash[:notice] = "'#{@route.name}' saved"
+      redirect_to locations_path
+    else
+      render 'new'
+    end
+  end
 end
