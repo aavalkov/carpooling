@@ -5,5 +5,8 @@
     <%= f.label :name%>
     <%= f.text_field :name %>
   </div>
+  <div class ='form-group'>
+    <%= f.collection_check_boxes :route_ids, Route.all, :id, :name, {:item_wrapper_class => 'checkbox_container'}%>
+  </div>
   <%= f.submit(:class => "btn btn-info") %>
 <% end %>

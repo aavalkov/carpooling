@@ -16,4 +16,8 @@ class StopsController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @stop = Stop.find(params[:id])
+  end
 end
