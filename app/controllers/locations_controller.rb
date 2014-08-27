@@ -21,4 +21,18 @@ class LocationsController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @location = Location.find(params[:id])
+  end
+
+  def update
+    @location = Location.find(params[:id])
+    if @location.update(params[:location])
+      flash[:notice] = "'#{@location.name}' updated"
+      redirect_to locations_path
+    else
+      render 'edit'
+    end
+  end
 end
