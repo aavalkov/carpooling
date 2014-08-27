@@ -1,14 +1,14 @@
 <h1>Carpooling</h1>
 <h3>Locations:</h3>
-<% @locations.each do |location|%>
 <ul>
+<% @locations.each do |location|%>
   <li><%= link_to "#{location.name}", location_path(location) %></li>
-  <% end %>
+<% end %>
 </ul>
 
 <h3>Routes:</h3>
-<% @routes.each do |route|%>
 <ul>
+<% @routes.each do |route|%>
   <li><%= link_to "#{route.name}", route_path(route) %></li>
   <% end %>
 </ul>
