@@ -4,3 +4,7 @@
 
 <%= link_to "Edit", edit_route_path(@route), :class => "btn btn-warning" %>
 <%= link_to "Home", locations_path, :class => "btn btn-success" %>
+<%= link_to "Delete", route_path(@route),
+                      :data => {:confirm => "Are you sure?",
+                                :method => "delete"},
+                                :class => "btn btn-danger" %>
