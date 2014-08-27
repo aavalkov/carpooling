@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: carpools_development
+
+test:
+  adapter: postgresql
+  database: carpools_test
