@@ -2,6 +2,7 @@ class LocationsController < ApplicationController
   def index
     @locations = Location.all
     @routes = Route.all
+    @data = Location.datamaker
   end
 
   def show
