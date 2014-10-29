@@ -4,11 +4,7 @@ Carpooling is an app that allows users to set up varous carpool locations and ro
 The project is for [Conventional Rails](http://www.learnhowtoprogram.com/lessons/bus-timetable) for [Epicodus](http://www.epicodus.com/).
 
 ##Setup
-In your terminal, clone this repo:
-
-```console
-$ clone https://github.com/nrbernard/lets-date.git
-```
+In your terminal, clone the repo
 
 Make sure you've installed [postgres](http://www.postgresql.org/download/) and have started the server:
 
